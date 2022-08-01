@@ -8,9 +8,9 @@ local Config = {
 }
 end
 
-oldUserId = game.Players.LocalPlayer.UserId
-oldName = game.Players.LocalPlayer.Name
-oldDisplayName = game.Players.LocalPlayer.DisplayName
+oldUserId = game:GetService("Players").LocalPlayer.UserId
+oldName = game:GetService("Players").LocalPlayer.Name
+oldDisplayName = game:GetService("Players").LocalPlayer.DisplayName
 
 for i,v in next, game:GetDescendants() do
 if v:IsA("TextBox") or v:IsA("TextLabel") or v:IsA("TextButton") then
@@ -33,26 +33,26 @@ end)
 --[[
 game.Players.LocalPlayer.Name = getgenv().FakeName
 ]]
-game.Players.LocalPlayer.DisplayName = Config.FakeName
-game.Players.LocalPlayer.CharacterAppearanceId = Config.FakeId
+game:GetService("Players").LocalPlayer.DisplayName = Config.FakeName
+game:GetService("Players").CharacterAppearanceId = Config.FakeId
 --[[
 game.Players.LocalPlayer.Character.Name = getgenv().FakeName
 game.Players.LocalPlayer.UserId = getgenv().UserId
 ]]
 
-if game.Players.LocalPlayer.Character:FindFirstChild("Head") and Config.Headless == true then
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Head") and Config.Headless == true then
     while wait(2) do
-    workspace:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Head")
-    game.Players.LocalPlayer.Character.Head.Transparency = 1
-    if game.Players.LocalPlayer.Character:FindFirstChild("Head"):FindFirstChildOfClass("Decal") then
-    game.Players.LocalPlayer.Character.Head:FindFirstChildOfClass("Decal"):Destroy()
+    workspace:WaitForChild(game:GetService("Players").LocalPlayer.Name):WaitForChild("Head")
+    game:GetService("Players").LocalPlayer.Character.Head.Transparency = 1
+    if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Head"):FindFirstChildOfClass("Decal") then
+    game:GetService("Players").LocalPlayer.Character.Head:FindFirstChildOfClass("Decal"):Destroy()
     end
 end
 end
 
-if workspace:WaitForChild(game.Players.LocalPlayer.Name):FindFirstChild("Left Leg") and Config.Korblox == true and game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").RigType == "R15" then
+if workspace:WaitForChild(game:GetService("Players").LocalPlayer.Name):FindFirstChild("Left Leg") and Config.Korblox == true and game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").RigType == "R15" then
 while wait(3) do
-    workspace:WaitForChild(game.Players.LocalPlayer.Name)
+    workspace:WaitForChild(game:GetService("Players").LocalPlayer.Name)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/CF-Trail/NameHider/main/CharacterAppearance/FakeKorblox"))()
 end
 end

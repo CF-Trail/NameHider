@@ -1,5 +1,5 @@
-if Config == nil then
-local Config = {
+--[[
+    local Config = {
     Headless = true,
     Korblox = true, -- ONLY R15
 
@@ -7,7 +7,7 @@ local Config = {
     FakeId = 1, -- input id
 }
 end
-
+]]
 oldUserId = game:GetService("Players").LocalPlayer.UserId
 oldName = game:GetService("Players").LocalPlayer.Name
 oldDisplayName = game:GetService("Players").LocalPlayer.DisplayName
@@ -34,7 +34,7 @@ end)
 game.Players.LocalPlayer.Name = getgenv().FakeName
 ]]
 game:GetService("Players").LocalPlayer.DisplayName = Config.FakeName
-game:GetService("Players").CharacterAppearanceId = Config.FakeId
+game:GetService("Players").LocalPlayer.CharacterAppearanceId = Config.FakeId
 --[[
 game.Players.LocalPlayer.Character.Name = getgenv().FakeName
 game.Players.LocalPlayer.UserId = getgenv().UserId

@@ -1,3 +1,4 @@
+if local Config == nil then
 local Config = {
     Headless = true,
     Korblox = true, -- ONLY R15
@@ -5,6 +6,7 @@ local Config = {
     FakeName = "Protected",
     FakeId = 1, -- input id
 }
+end
 
 oldUserId = game.Players.LocalPlayer.UserId
 oldName = game.Players.LocalPlayer.Name

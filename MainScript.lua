@@ -45,6 +45,6 @@ if game.Players.LocalPlayer.Character:FindFirstChild("Head") and Config.Headless
     game.Players.LocalPlayer.Character.Head:FindFirstChildOfClass("Decal"):Destroy()
 end
 
-if workspace:WaitForChild(game.Players.LocalPlayer.Name):FindFirstChild("Left Leg") and Config.Korblox == true and game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").RigType == Enum.RigType.R15 then
+if workspace:WaitForChild(game.Players.LocalPlayer.Name):FindFirstChild("Left Leg") and Config.Korblox == true and game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").RigType == "R15" then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CF-Trail/NameHider/main/CharacterAppearance/FakeKorblox"))()
 end

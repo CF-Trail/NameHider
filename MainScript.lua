@@ -41,10 +41,7 @@ game.Players.LocalPlayer.UserId = getgenv().UserId
 
 if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Head") and getgenv().Config.Headless == true then
     while wait(2) do
-    workspace:WaitForChild(game:GetService("Players").LocalPlayer.Name):WaitForChild("Head")
-    game:GetService("Players").LocalPlayer.Character.Head.Transparency = 1
-    if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Head"):FindFirstChildOfClass("Decal") then
-    game:GetService("Players").LocalPlayer.Character.Head:FindFirstChildOfClass("Decal"):Destroy()
-    end
+    workspace:WaitForChild(game:GetService("Players").LocalPlayer.Name):WaitForChild("Head").Transparency = 1
+    workspace:WaitForChild(game:GetService("Players").LocalPlayer.Name):WaitForChild("face"):Destroy()
 end
 end

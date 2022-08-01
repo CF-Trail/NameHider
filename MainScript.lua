@@ -1,4 +1,4 @@
-if local Config == nil then
+if Config == nil then
 local Config = {
     Headless = true,
     Korblox = true, -- ONLY R15

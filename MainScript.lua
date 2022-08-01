@@ -40,10 +40,18 @@ game.Players.LocalPlayer.UserId = getgenv().UserId
 ]]
 
 if game.Players.LocalPlayer.Character:FindFirstChild("Head") and Config.Headless == true then
+    while wait(2) do
+    workspace:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Head")
     game.Players.LocalPlayer.Character.Head.Transparency = 1
+    if game.Players.LocalPlayer.Character:FindFirstChild("Head"):FindFirstChildOfClass("Decal") then
     game.Players.LocalPlayer.Character.Head:FindFirstChildOfClass("Decal"):Destroy()
+    end
+end
 end
 
 if workspace:WaitForChild(game.Players.LocalPlayer.Name):FindFirstChild("Left Leg") and Config.Korblox == true and game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").RigType == "R15" then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CF-Trail/NameHider/main/CharacterAppearance/FakeKorblox"))()
+while wait(3) do
+    workspace:WaitForChild(game.Players.LocalPlayer.Name)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CF-Trail/NameHider/main/CharacterAppearance/FakeKorblox"))()
+end
 end

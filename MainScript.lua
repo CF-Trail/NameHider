@@ -1,12 +1,11 @@
-if Config == nil then
-local Config = {
+--[[local Config = {
     Headless = true,
     Korblox = true, -- ONLY R15
 
     FakeName = "Protected",
     FakeId = 1, -- input id
 }
-end
+]]
 
 oldUserId = game.Players.LocalPlayer.UserId
 oldName = game.Players.LocalPlayer.Name

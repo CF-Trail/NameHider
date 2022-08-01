@@ -48,10 +48,3 @@ if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Head") and g
     end
 end
 end
-
-if workspace:WaitForChild(game:GetService("Players").LocalPlayer.Name):FindFirstChild("Left Leg") and getgenv().Config.Korblox == true and game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").RigType == "R15" then
-while wait(3) do
-    workspace:WaitForChild(game:GetService("Players").LocalPlayer.Name)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/CF-Trail/NameHider/main/CharacterAppearance/FakeKorblox"))()
-end
-end
